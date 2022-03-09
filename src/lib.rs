@@ -55,10 +55,10 @@ pub fn gammp(a: f64, x: f64) -> f64 {
     assert!(x >= 0f64 && a > 0f64, "Bad args in gammp");
     if x == 0f64 {
         0f64
-    } else if (a as usize) >= ASWITCH {
+    } /*else if (a as usize) >= ASWITCH {
         // Quadrature
         gammpapprox(a,x,IncGamma::P)
-    } else if x < a + 1f64 {
+    } */else if x < a + 1f64 {
         // Series representation
         gser(a,x)
     } else {
